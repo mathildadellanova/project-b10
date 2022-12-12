@@ -437,6 +437,7 @@ class GroceriesView:
 
 class BloodView:
     @staticmethod
+    @csrf_exempt
     @login_required(login_url="/sign-in")
     def show_blood(request):
         if request.method == "POST":
